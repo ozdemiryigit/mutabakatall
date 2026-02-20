@@ -1,0 +1,12 @@
+{
+  "name": "ozdemiryigit-mutabakatall",
+  "version": "1.0.0",
+  "description": "ozdemiryigit-mutabakatall",
+  "repositoryLayout": {
+    "format": "json",
+    "formatVersion": "6",
+    "keepClient": "false",
+    "metaInformation": ".gctsmetadata/",
+    "tableContent": "true"
+  }
+}
