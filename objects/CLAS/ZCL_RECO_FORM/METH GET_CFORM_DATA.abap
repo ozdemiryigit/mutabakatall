@@ -756,8 +756,8 @@
 *    DELETE ADJACENT DUPLICATES FROM gt_bsik COMPARING belnr lifnr gjahr.
 *    DELETE ADJACENT DUPLICATES FROM gt_bsid COMPARING belnr kunnr gjahr.
 
-    DELETE gt_bsid WHERE clearingdate > gv_last_date. "YiğitcanÖzdemir 20022026
-    DELETE gt_bsik WHERE clearingdate > gv_last_date. "YiğitcanÖzdemir 20022026
+*    DELETE gt_bsid WHERE clearingdate > gv_last_date. "YiğitcanÖzdemir 20022026
+*    DELETE gt_bsik WHERE clearingdate > gv_last_date. "YiğitcanÖzdemir 20022026
 
 
     modify_account_group( ).
