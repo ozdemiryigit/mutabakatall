@@ -299,7 +299,7 @@
   WHERE documentdate    LE @gv_last_date
         AND  (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
             AND companycode     IN @s_bukrs
-            AND fiscalyear     EQ @p_gjahr
+            AND fiscalyear     LE @p_gjahr
             AND businessarea    IN @s_gsber  "hkizilkaya
             AND accountingdocument IN @lt_belnr
             AND accountingdocumenttype IN @lt_blart
@@ -442,7 +442,7 @@
           WHERE documentdate    LE @gv_last_date
         AND (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
             AND companycode      IN @s_bukrs
-            AND fiscalyear     EQ @p_gjahr
+            AND fiscalyear     LE @p_gjahr
             AND businessarea     IN @s_gsber  "hkizilkaya
             AND accountingdocument IN @lt_belnr
             AND accountingdocumenttype IN @lt_blart
@@ -595,7 +595,7 @@
           WHERE documentdate    LE @gv_last_date
             AND  (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
             AND companycode     IN @s_bukrs
-            AND fiscalyear     EQ @p_gjahr
+            AND fiscalyear     LE @p_gjahr
             AND businessarea    IN @s_gsber
             AND accountingdocument IN @lt_belnr
             AND accountingdocumenttype IN @lt_blart
@@ -693,7 +693,7 @@
            WHERE documentdate    LE @gv_last_date
             AND   (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
             AND companycode     IN @s_bukrs
-            AND fiscalyear     EQ @p_gjahr
+            AND fiscalyear     LE @p_gjahr
             AND businessarea    IN @s_gsber
             AND accountingdocument IN @lt_belnr
             AND accountingdocumenttype IN @lt_blart
