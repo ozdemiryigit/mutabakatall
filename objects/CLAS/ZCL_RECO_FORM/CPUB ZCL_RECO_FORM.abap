@@ -373,13 +373,15 @@ CLASS zcl_reco_form DEFINITION
     DATA : gt_bsid_temp TYPE TABLE OF zreco_tbsd,
            gs_bsid_temp TYPE zreco_tbsd.
 * Müşteri açık ve denkleştirilmiş kalemler
-    DATA :  gt_bsid TYPE SORTED TABLE OF ty_bsid  WITH NON-UNIQUE KEY kunnr belnr gjahr  .
+*    DATA :  gt_bsid TYPE SORTED TABLE OF ty_bsid  WITH NON-UNIQUE KEY kunnr belnr gjahr  .
+    DATA gt_bsid TYPE STANDARD TABLE OF ty_bsid.
 
     DATA : gs_bsid TYPE ty_bsid.
 
 * Satıcı açık ve denkleştirilmiş kalemler
-    DATA : gt_bsik TYPE SORTED TABLE OF ty_bsik
-                   WITH NON-UNIQUE KEY lifnr belnr gjahr  .
+*    DATA : gt_bsik TYPE SORTED TABLE OF ty_bsik
+*                   WITH NON-UNIQUE KEY lifnr belnr gjahr  .
+    DATA gt_bsik TYPE STANDARD TABLE OF ty_bsik.
 
 
     TYPES: BEGIN OF ty_bkpf_2,
