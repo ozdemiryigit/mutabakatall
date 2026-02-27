@@ -604,8 +604,7 @@
             AND transactioncurrency IN @s_waers
             AND isreversal       IS NULL
             AND isreversed       IS NULL
-*          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
-          INTO CORRESPONDING FIELDS OF TABLE @gt_bsik.
+          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
 
 *          SELECT
 *            supplier                AS lifnr,
@@ -703,8 +702,7 @@
             AND transactioncurrency IN @s_waers
             AND isreversal       IS NULL
             AND isreversed       IS NULL
-*          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
-            INTO CORRESPONDING FIELDS OF TABLE @gt_bsik.
+          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
 
 *          SELECT
 *              supplier                AS lifnr,
