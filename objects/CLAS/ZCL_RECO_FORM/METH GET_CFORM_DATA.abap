@@ -593,7 +593,7 @@
           FROM zetr_reco_ddl_bsikbsak
           FOR ALL ENTRIES IN @gt_lfa1_tax
           WHERE documentdate    LE @gv_last_date
-            AND  (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
+            AND  (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry IS NULL )
             AND companycode     IN @s_bukrs
             AND fiscalyear     LE @p_gjahr
             AND businessarea    IN @s_gsber
@@ -602,8 +602,8 @@
             AND supplier        EQ @gt_lfa1_tax-lifnr
             AND specialglcode   IN @r_umskz_m
             AND transactioncurrency IN @s_waers
-            AND isreversal       EQ ''
-            AND isreversed       EQ ''
+            AND isreversal       IS NULL
+            AND isreversed       IS NULL
           APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
 
 *          SELECT
@@ -691,7 +691,7 @@
           FROM zetr_reco_ddl_bsikbsak
           FOR ALL ENTRIES IN @gt_lfa1_tax
            WHERE documentdate    LE @gv_last_date
-            AND   (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry = '' )
+            AND   (  clearingdate    GE @gv_last_date  OR ClearingJournalEntry IS NULL )
             AND companycode     IN @s_bukrs
             AND fiscalyear     LE @p_gjahr
             AND businessarea    IN @s_gsber
@@ -700,8 +700,8 @@
             AND supplier        EQ @gt_lfa1_tax-lifnr
             AND specialglcode   IN @r_umskz_m
             AND transactioncurrency IN @s_waers
-            AND isreversal       EQ ''
-            AND isreversed       EQ ''
+            AND isreversal       IS NULL
+            AND isreversed       IS NULL
           APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
 
 
