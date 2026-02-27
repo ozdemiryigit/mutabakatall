@@ -602,9 +602,11 @@
             AND supplier        EQ @gt_lfa1_tax-lifnr
             AND specialglcode   IN @r_umskz_m
             AND transactioncurrency IN @s_waers
-            AND isreversal       IS NULL
-            AND isreversed       IS NULL
-          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
+            AND isreversal       EQ ''
+            AND isreversed       EQ ''
+*          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
+          INTO CORRESPONDING FIELDS OF TABLE @gt_bsik.
+
 
 *          SELECT
 *            supplier                AS lifnr,
@@ -700,9 +702,10 @@
             AND supplier        EQ @gt_lfa1_tax-lifnr
             AND specialglcode   IN @r_umskz_m
             AND transactioncurrency IN @s_waers
-            AND isreversal       IS NULL
-            AND isreversed       IS NULL
-          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
+            AND isreversal       EQ ''
+            AND isreversed       EQ ''
+*          APPENDING CORRESPONDING FIELDS OF TABLE @gt_bsik.
+          INTO CORRESPONDING FIELDS OF TABLE @gt_bsik.
 
 *          SELECT
 *              supplier                AS lifnr,
